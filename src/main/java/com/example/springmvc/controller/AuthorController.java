@@ -16,12 +16,12 @@ public class AuthorController {
     }
 
     @PostMapping
-    public ResponseEntity<AuthorDto> creatBus(@RequestBody AuthorDto authorDto) {
+    public ResponseEntity<AuthorDto> creatAuthor(@RequestBody AuthorDto authorDto) {
         return new ResponseEntity<>(authorService.creatAuthor(authorDto), HttpStatus.OK);
     }
 
     @GetMapping("/{id}")
-    public ResponseEntity<AuthorDto> getBus(@PathVariable Integer id) {
+    public ResponseEntity<AuthorDto> getAuthor(@PathVariable Integer id) {
         return new ResponseEntity<>(authorService.getAuthor(id), HttpStatus.OK);
     }
 }

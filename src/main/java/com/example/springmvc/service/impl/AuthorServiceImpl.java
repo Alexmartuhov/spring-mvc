@@ -4,9 +4,11 @@ import com.example.springmvc.controller.dto.AuthorDto;
 import com.example.springmvc.dao.AuthorDao;
 import com.example.springmvc.dao.entities.AuthorEntity;
 import com.example.springmvc.service.AuthorService;
+import org.springframework.stereotype.Service;
 
 import java.util.Objects;
 
+@Service
 public class AuthorServiceImpl implements AuthorService {
 
     private AuthorDao authorDao;

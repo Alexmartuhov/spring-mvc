@@ -7,9 +7,11 @@ import com.example.springmvc.dao.BookDao;
 import com.example.springmvc.dao.entities.AuthorEntity;
 import com.example.springmvc.dao.entities.BookEntity;
 import com.example.springmvc.service.BookService;
+import org.springframework.stereotype.Service;
 
 import java.util.Objects;
 
+@Service
 public class BookServiceImpl implements BookService {
 
     private BookDao bookDao;
@@ -37,6 +39,7 @@ public class BookServiceImpl implements BookService {
         BookDto bookdto = null;
         AuthorDto authordto = null;
         if (Objects.nonNull(result)) {
+            bookdto=new BookDto();
             bookdto.setId(result.getId());
             bookdto.setTitle(result.getTitle());
             bookdto.setGenre(result.getGenre());
